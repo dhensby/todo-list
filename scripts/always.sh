@@ -11,4 +11,5 @@ fi
 if [ -d /var/www/html/silverstripe-cache ]; then
 	echo "Clearing SS site cache"
     rm -rf /var/www/html/silverstripe-cache/*
+    rm -rf /var/www/html/silverstripe-cache/.*
 fi
