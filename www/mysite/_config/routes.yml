@@ -9,4 +9,4 @@ After:
 Director:
   rules:
     '': 'RootController'
-    'todo': 'RootController'
+    'todo': 'ListController'

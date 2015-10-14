@@ -7,7 +7,6 @@ class TaskController extends Controller {
 	);
 
 	public function index($request) {
-		Debug::message(sprintf('%s - %s', __CLASS__, __FUNCTION__));
 		if (!$request->latestParam('TaskID')) {
 			return $this->httpError(404);
 		}
