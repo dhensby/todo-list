@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f91fbabc726221286defda577585b70c",
-    "content-hash": "8d7a7ebd7e612b0cac5c894727ba9009",
+    "hash": "5c86d798fb0a8e841dd30f8a10586149",
+    "content-hash": "364e58f0a28c8a0f8d98626c7f850980",
     "packages": [
         {
             "name": "composer/installers",
@@ -131,6 +131,59 @@
             ],
             "description": "A Composer post-update-cmd script to automatically add Composer managed SilverStripe modules and themes to .gitignore",
             "time": "2015-03-05 23:18:02"
+        },
+        {
+            "name": "silverstripe-australia/gridfieldextensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-australia/silverstripe-gridfieldextensions.git",
+                "reference": "1d25be7bdd286e589370f82f0526a309ddf226e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/1d25be7bdd286e589370f82f0526a309ddf226e0",
+                "reference": "1d25be7bdd286e589370f82f0526a309ddf226e0",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "replace": {
+                "ajshort/silverstripe-gridfieldextensions": "self.version"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "gridfieldextensions",
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                },
+                "screenshots": [
+                    "docs/en/_images/editable-rows.png",
+                    "docs/en/_images/add-existing-search.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@silverstripe.com.au"
+                },
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                }
+            ],
+            "description": "A collection of useful grid field components",
+            "homepage": "http://github.com/silverstripe-australia/silverstripe-gridfieldextensions",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2015-10-08 00:29:57"
         },
         {
             "name": "silverstripe/framework",
@@ -598,7 +651,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "silverstripe/framework": 20
+        "silverstripe/framework": 20,
+        "silverstripe-australia/gridfieldextensions": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

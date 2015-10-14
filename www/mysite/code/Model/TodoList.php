@@ -77,4 +77,14 @@ class TodoList extends DataObject {
 		}
 	}
 
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+
+		if (ClassInfo::exists('GridFieldOrderableRows')) {
+			$fields->dataFieldByName('Tasks')->getConfig()->addComponent(new GridFieldOrderableRows('Sort'));
+		}
+
+		return $fields;
+	}
+
 }

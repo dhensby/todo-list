@@ -4,7 +4,8 @@
 	"require": {
 		"php": ">=5.3.3",
 		"silverstripe/framework": "3.2.x-dev",
-		"gdmedia/ss-auto-git-ignore": "~0.0"
+		"gdmedia/ss-auto-git-ignore": "~0.0",
+		"silverstripe-australia/gridfieldextensions": "1.2.x-dev"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7"
