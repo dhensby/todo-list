@@ -1,0 +1,12 @@
+Name: mysiteroutes
+Before: '*'
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+  - '#modelascontrollerroutes'
+  - '#adminroutes'
+---
+Director:
+  rules:
+    '': 'RootController'
+    'todo': 'RootController'
