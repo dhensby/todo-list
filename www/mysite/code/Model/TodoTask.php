@@ -59,4 +59,8 @@ class TodoTask extends DataObject {
 		return $this;
 	}
 
+	public function Link($action = null) {
+		return Controller::join_links($this->List()->Link(), 'task', $this->ID, $action);
+	}
+
 }

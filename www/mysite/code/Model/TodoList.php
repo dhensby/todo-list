@@ -29,11 +29,18 @@ class TodoList extends DataObject {
 	 */
 	private static $singular_name = 'List';
 
+	public function isComplete() {
+		return $this->Tasks()->exists() && !$this->IncompleteTasks()->exists();
+	}
+
 	/**
 	 * @return float
 	 */
 	public function PercentComplete() {
-		return round(($this->CompleteTasks()->Count() / $this->Tasks()->Count()) * 100);
+		if ($taskCount = $this->Tasks()->Count()) {
+			return round(($this->CompleteTasks()->Count() / $taskCount) * 100);
+		}
+		return 0;
 	}
 
 	/**

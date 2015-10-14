@@ -1,6 +1,7 @@
 <div class="row">
 	<h1>$TodoList.Title</h1>
 	<p class="text-muted"><a href="$Link">&lt; back to task lists</a></p>
+	<progress class="progress progress-striped <% if $TodoList.isComplete %>progress-success<% end_if %>" value="$TodoList.PercentComplete" max="100">{$TodoList.PercentComplete}%</progress>
 </div>
 <div class="row">
 	<% if $TodoList.Tasks %>
