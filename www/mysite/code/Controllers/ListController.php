@@ -61,7 +61,9 @@ class ListController extends Controller {
 	 * @return $this
 	 */
 	public function setLists($lists) {
-		$this->lists = $lists;
+		$this->lists = $lists->filterByCallback(function($item) {
+			return $item->canView();
+		});
 		return $this;
 	}
 
@@ -104,6 +106,9 @@ class ListController extends Controller {
 	 * @return $this
 	 */
 	public function setTodoList($list) {
+		if (!$list->canView()) {
+			$list = TodoList::create();
+		}
 		$this->list = $list;
 		return $this;
 	}

@@ -15,6 +15,10 @@ class TodoList extends DataObject {
 		'Title' => 'Varchar(255)',
 	);
 
+	private static $has_one = array(
+		'Owner' => 'Member',
+	);
+
 	/**
 	 * @var array
 	 * @config
@@ -92,6 +96,16 @@ class TodoList extends DataObject {
 		}
 
 		return $fields;
+	}
+
+	public function extendedCan($methodName, $member) {
+		if (!$member) {
+			$member = Member::currentUser();
+		}
+		if ($this->Owner()->exists() && $this->Owner()->ID == $member->ID) {
+			return true;
+		}
+		return parent::extendedCan($methodName, $member);
 	}
 
 }
