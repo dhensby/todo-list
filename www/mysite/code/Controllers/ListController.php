@@ -168,7 +168,8 @@ class ListController extends Controller {
 	 * @return TaskController
 	 */
 	public function task($request) {
-		return TaskController::create()->handleRequest($request, $this->model);
+		return TaskController::create()
+			->handleRequest($request, $this->model);
 	}
 
 	/**
